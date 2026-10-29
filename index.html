@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#1a0a0a">
+  <title>ECOPALIE — Banco de Sustentabilidade</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <div class="header-top">
+        <img src="logo.png" alt="ECOPALIE" class="logo">
+        <div class="header-text">
+          <h1>ECOPALIE</h1>
+          <p>Banco de Sustentabilidade</p>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <section id="dashboard" class="section active">
+        <div class="balance-card">
+          <div class="balance-label">Meu Saldo</div>
+          <div class="balance-value">
+            <span id="balance-amount">248</span>
+            <span class="balance-unit">Eco-Moedas</span>
+          </div>
+          <div class="balance-progress">
+            <div class="progress-bar" id="progress-bar"></div>
+          </div>
+          <div class="balance-hint">Faltam <span id="next-reward">52</span> para o próximo benefício</div>
+        </div>
+
+        <div class="quick-actions">
+          <h2 class="section-title">Como ganhar</h2>
+          <div class="actions-grid">
+            <div class="action-card" data-action="embalagens">
+              <div class="action-icon">♻️</div>
+              <div class="action-name">Embalagens</div>
+              <div class="action-points">+30</div>
+            </div>
+            <div class="action-card" data-action="transporte">
+              <div class="action-icon">🚶</div>
+              <div class="action-name">Transporte</div>
+              <div class="action-points">+20</div>
+            </div>
+            <div class="action-card" data-action="garrafa">
+              <div class="action-icon">🥤</div>
+              <div class="action-name">Garrafa/Sacola</div>
+              <div class="action-points">+15</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="impact-preview">
+          <h2 class="section-title">Meu Impacto</h2>
+          <div class="impact-stats">
+            <div class="impact-stat">
+              <div class="stat-value" id="plastic-saved">1.2</div>
+              <div class="stat-label">kg plástico</div>
+            </div>
+            <div class="impact-stat">
+              <div class="stat-value" id="packages-recycled">47</div>
+              <div class="stat-label">embalagens</div>
+            </div>
+            <div class="impact-stat">
+              <div class="stat-value" id="visits-sustainable">18</div>
+              <div class="stat-label">visitas verdes</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="historico" class="section">
+        <h2 class="section-title">Histórico</h2>
+        <div class="history-list" id="history-list"></div>
+      </section>
+
+      <section id="impacto" class="section">
+        <h2 class="section-title">Meu Impacto</h2>
+        <div class="impact-detail">
+          <div class="impact-card large">
+            <div class="impact-icon">🌍</div>
+            <div class="impact-info">
+              <div class="impact-number" id="total-impact">1.2 kg</div>
+              <div class="impact-desc">de plástico economizado</div>
+            </div>
+          </div>
+          <div class="impact-grid">
+            <div class="impact-card">
+              <div class="impact-icon">♻️</div>
+              <div class="impact-number" id="impact-packages">47</div>
+              <div class="impact-desc">embalagens recicladas</div>
+            </div>
+            <div class="impact-card">
+              <div class="impact-icon">🚶</div>
+              <div class="impact-number" id="impact-trips">18</div>
+              <div class="impact-desc">deslocamentos sustentáveis</div>
+            </div>
+            <div class="impact-card">
+              <div class="impact-icon">🥤</div>
+              <div class="impact-number" id="impact-bottles">32</div>
+              <div class="impact-desc">garrafas reutilizadas</div>
+            </div>
+            <div class="impact-card">
+              <div class="impact-icon">💰</div>
+              <div class="impact-number" id="impact-coins">248</div>
+              <div class="impact-desc">Eco-Moedas totais</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="loja" class="section">
+        <h2 class="section-title">Loja de Vantagens</h2>
+        <div class="rewards-list" id="rewards-list"></div>
+      </section>
+    </main>
+
+    <nav class="bottom-nav">
+      <button class="nav-item active" data-section="dashboard">
+        <span class="nav-icon">🏠</span>
+        <span class="nav-label">Início</span>
+      </button>
+      <button class="nav-item" data-section="historico">
+        <span class="nav-icon">📋</span>
+        <span class="nav-label">Histórico</span>
+      </button>
+      <button class="nav-item" data-section="impacto">
+        <span class="nav-icon">🌱</span>
+        <span class="nav-label">Impacto</span>
+      </button>
+      <button class="nav-item" data-section="loja">
+        <span class="nav-icon">🎁</span>
+        <span class="nav-label">Loja</span>
+      </button>
+    </nav>
+
+    <div class="toast" id="toast"></div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
